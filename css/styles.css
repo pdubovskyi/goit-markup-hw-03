@@ -39,6 +39,13 @@ ol {
   padding-left: 0;
 }
 
+img {
+  display: block;
+}
+
+
+
+
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--main-text-color);
@@ -48,6 +55,8 @@ body {
 /*--------------------LOGO -------------------*/
 
 .logo {
+  margin-right: 93px;
+
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -70,12 +79,39 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   outline: 2px solid;
-  background-color: lightblue;
+  background-color: ;
 }
 
 .header .container {
   padding-top: 25px;
   padding-bottom: 24px;
+}
+
+.header-flex,
+.nav-flex,
+.nav-list-flex,
+.contacts-flex {
+  display: flex;
+}
+
+.header-flex,
+.nav-flex,
+.nav-list-flex,
+.contacts-flex {
+  align-items: center;
+}
+
+.nav {
+  margin-right: auto;
+}
+
+.nav-list-flex,
+.contacts-flex {
+  gap: 50px;
+}
+
+.nav-item {
+  flex-basis: calc((100% - 100px) / 3);
 }
 
 .nav-link,
@@ -121,6 +157,11 @@ body {
   background-color: var(--second-bgc-color);
 }
 
+.hero .container {
+  padding-top: 194px;
+  padding-bottom: 194px;
+}
+
 .hero-title {
   margin-bottom: 30px;
   margin-left: auto;
@@ -140,7 +181,6 @@ body {
 .btn {
   border: 1px solid transparent;
 }
-
 
 .hero-btn {
   padding: 10px 32px;
@@ -182,6 +222,8 @@ body {
 }
 
 .benefits-title {
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -197,8 +239,19 @@ body {
   color: var(--main-text-color);
 }
 
+.benefits-list {
+  display: flex;
+  gap: 30px;
+}
+
+.benefits-item {
+  flex-basis: calc ((100% - 90px) / 4);
+}
+
 /*--------------MAIN: WORKS-------------------*/
 .works-main-title {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -207,12 +260,23 @@ body {
   color: var(--second-text-color);
 }
 
+.works-list {
+  display: flex;
+  gap: 30px;
+}
+
+.works-list-item {
+  flex-basis: calc ((100% - 60px) / 30);
+}
+
 /*------------------MAIN: TEAM------------------------*/
 .team {
   background-color: var(--third-bgc-color);
 }
 
 .team-main-title {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -222,7 +286,22 @@ body {
 }
 
 .team-list {
+  display: flex;
+  gap: 30px;
+
   background-color: var(--first-bgc-color);
+}
+
+.team-item {
+  flex-basis: calc ((100% - 90px) / 4);
+  border-radius: 0px 0px 4px 4px;
+  border: 1px solid;
+
+
+}
+
+.team-image {
+  margin-bottom: 30px;
 }
 
 .team-title,
@@ -235,10 +314,19 @@ body {
   color: var(--second-text-color);
 }
 
+.team-title {
+  margin-bottom: 10px;
+}
 .team-text {
   font-weight: 400;
   color: var(--main-text-color);
 }
+
+.team-text {
+  margin-bottom: 30px;
+}
+
+
 
 /*-----------------FOOTER-----------------*/
 
@@ -246,7 +334,16 @@ body {
   background-color: var(--second-bgc-color);
 }
 
+.footer .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+
 .footer-logo {
+  display: block;
+  margin-bottom: 20px;
+
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 26px;
@@ -257,7 +354,13 @@ body {
 }
 
 .address-list {
+  min-width: 231px;
   list-style: none;
+}
+
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
+
 }
 
 .address-location,
@@ -281,7 +384,33 @@ body {
 
 /*--------------PORTFOLIO: FILTER---------*/
 
+.filter-list {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+
+  margin-bottom: 34px;
+}
+
+.filter-item {
+  flex-basis: calc ((100% - 40px) / 8);
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.portfolio-item {
+  flex-basis: calc ((100% - 60px) / 3);
+}
+
 .filter-btn {
+  padding: 6px 22px;
+  min-width: 73px;
+
+
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -315,4 +444,14 @@ body {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
+}
+
+.portfolio-image {
+  margin-bottom: 20px;
+}
+
+.portfolio-content {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 20px;
 }

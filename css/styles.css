@@ -41,10 +41,11 @@ ol {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-
-
+/*--------------------BODY---------------------------*/
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -52,7 +53,7 @@ body {
   background-color: var(--first-bgc-color);
 }
 
-/*--------------------LOGO -------------------*/
+/*--------------------LOGO --------------------------*/
 
 .logo {
   margin-right: 93px;
@@ -78,8 +79,11 @@ body {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 2px solid;
-  background-color: ;
+  /* outline: 2px solid; */
+}
+
+.header {
+  border: 1px solid #ececec;
 }
 
 .header .container {
@@ -88,16 +92,16 @@ body {
 }
 
 .header-flex,
-.nav-flex,
-.nav-list-flex,
-.contacts-flex {
+.nav,
+.nav-list,
+.contacts {
   display: flex;
 }
 
 .header-flex,
-.nav-flex,
-.nav-list-flex,
-.contacts-flex {
+.nav,
+.nav-list,
+.contacts {
   align-items: center;
 }
 
@@ -105,8 +109,8 @@ body {
   margin-right: auto;
 }
 
-.nav-list-flex,
-.contacts-flex {
+.nav-list,
+.contacts {
   gap: 50px;
 }
 
@@ -116,6 +120,8 @@ body {
 
 .nav-link,
 .contacts-link {
+  display: inline-block;
+  padding: 10px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -153,26 +159,26 @@ body {
   padding-bottom: 94px;
 }
 
-.hero {
-  background-color: var(--second-bgc-color);
+.hero .container {
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
-.hero .container {
-  padding-top: 194px;
-  padding-bottom: 194px;
+.hero {
+  background-color: var(--second-bgc-color);
+  text-align: center;
 }
 
 .hero-title {
+  display: ;
   margin-bottom: 30px;
-  margin-left: auto;
   margin-right: auto;
-
+  margin-left: auto;
   font-weight: 900;
   font-size: 44px;
   width: 696px;
 
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--third-text-color);
@@ -184,21 +190,18 @@ body {
 
 .hero-btn {
   padding: 10px 32px;
-  margin-left: auto;
-  margin-right: auto;
   min-width: 216px;
 
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
+
   color: var(--btn-text-color);
   background-color: var(--btn-bgc-color);
   border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
 
@@ -245,7 +248,7 @@ body {
 }
 
 .benefits-item {
-  flex-basis: calc ((100% - 90px) / 4);
+  width: calc ((100% - 90px)/4);
 }
 
 /*--------------MAIN: WORKS-------------------*/
@@ -295,14 +298,13 @@ body {
 .team-item {
   flex-basis: calc ((100% - 90px) / 4);
   border-radius: 0px 0px 4px 4px;
-  border: 1px solid;
-
-
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.team-image {
+/* .team-image {
   margin-bottom: 30px;
-}
+} */
 
 .team-title,
 .team-text {
@@ -317,16 +319,20 @@ body {
 .team-title {
   margin-bottom: 10px;
 }
+
+.team-item-wrap {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .team-text {
   font-weight: 400;
   color: var(--main-text-color);
 }
 
-.team-text {
+/* .team-text {
   margin-bottom: 30px;
-}
-
-
+} */
 
 /*-----------------FOOTER-----------------*/
 
@@ -338,7 +344,6 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-
 
 .footer-logo {
   display: block;
@@ -360,7 +365,6 @@ body {
 
 .address-item:not(:last-child) {
   margin-bottom: 9px;
-
 }
 
 .address-location,
@@ -393,7 +397,7 @@ body {
 }
 
 .filter-item {
-  flex-basis: calc ((100% - 40px) / 8);
+  flex-basis: calc ((100% - 32px) / 5);
 }
 
 .portfolio-list {
@@ -408,8 +412,7 @@ body {
 
 .filter-btn {
   padding: 6px 22px;
-  min-width: 73px;
-
+  /* min-width: 73px; */
 
   font-family: inherit;
   font-weight: 500;
@@ -446,12 +449,9 @@ body {
   letter-spacing: 0.03em;
 }
 
-.portfolio-image {
-  margin-bottom: 20px;
-}
-
 .portfolio-content {
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-bottom: 20px;
+  padding: 20px 24px;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
 }

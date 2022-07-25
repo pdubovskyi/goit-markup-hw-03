@@ -83,12 +83,9 @@ body {
 }
 
 .header {
-  border: 1px solid #ececec;
-}
-
-.header .container {
+  border-bottom: 1px solid #ececec;
   padding-top: 25px;
-  padding-bottom: 24px;
+  padding-bottom: 25px;
 }
 
 .header-flex,
@@ -121,7 +118,6 @@ body {
 .nav-link,
 .contacts-link {
   display: inline-block;
-  padding: 10px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -154,12 +150,12 @@ body {
 
 /* -------------MAIN: HERO ----------------------*/
 
-.section .container {
+.section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
-.hero .container {
+.hero {
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -252,6 +248,10 @@ body {
 }
 
 /*--------------MAIN: WORKS-------------------*/
+.works {
+  padding-top: 0;
+}
+
 .works-main-title {
   margin-bottom: 50px;
 
@@ -340,7 +340,7 @@ body {
   background-color: var(--second-bgc-color);
 }
 
-.footer .container {
+.footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -393,7 +393,7 @@ body {
   gap: 8px;
   justify-content: center;
 
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 
 .filter-item {
@@ -441,6 +441,7 @@ body {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--second-text-color);
+  margin-bottom: 4px;
 }
 
 .portfolio-text {
